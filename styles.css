@@ -1,0 +1,172 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body & Typography */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+  background-color: #ffffff; /* whole page background white */
+  color: #333;
+  padding: 0;
+  margin: 0;
+}
+
+/* Header with full background image */
+header {
+  background-image: url("header.jpg"); /* use your actual image file */
+  background-size: cover;       /* makes the image fill the header */
+  background-position: center;  /* centers the image */
+  background-repeat: no-repeat; /* prevents tiling */
+  color: #fff;
+  text-align: center;
+  padding: 4rem 1rem;           /* controls vertical height */
+  position: relative;
+  min-height: 350px;            /* ensures header is tall enough to show the image */
+}
+
+/* Optional overlay for readability */
+header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);  /* semi-transparent black overlay */
+  z-index: 1;
+}
+
+header h1, header p, nav {
+  position: relative;
+  z-index: 2; /* keeps text above overlay */
+}
+
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Navigation (Horizontal) */
+nav {
+  margin-top: 1rem;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.nav-links li {
+  display: inline-block; /* horizontal layout */
+  margin: 0 0.8rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #000; /* black text for visibility */
+  background-color: #e6e6e6; /* light gray background */
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #ffcc00; /* gold hover */
+  color: #000;
+}
+
+/* Profile Photo */
+.profile-photo {
+  width: 7cm;
+  height: 7cm;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #333;
+}
+
+/* Sections */
+section {
+  background: #fff;
+  color: #333;
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 900px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  color: #004aad;
+  margin-bottom: 1rem;
+}
+
+section h3 {
+  font-size: 1.5rem;
+  color: #004aad;
+  margin-bottom: 0.8rem;
+}
+
+section p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+/* Project/Education/Skills/Hobbies Cards */
+.project, .education, .skills, .hobbies {
+  margin-bottom: 2rem;
+}
+
+.project h2, .education h2, .skills h2, .hobbies h2 {
+  border-bottom: 2px solid #004aad;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+  background: #13b2d6;
+  color: #004aad;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border-top: 2px solid #004aad;
+}
+
+footer a {
+  color: #004aad;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 0.5rem;
+}
+
+footer a:hover {
+  color: #ff6600;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: #004aad;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #00337a;
+}
