@@ -18,14 +18,14 @@ body {
 /* Header with full background image */
 header {
   background-image: url("header.jpg"); /* use your actual image file */
-  background-size: cover;       /* makes the image fill the header */
-  background-position: center;  /* centers the image */
-  background-repeat: no-repeat; /* prevents tiling */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #fff;
   text-align: center;
-  padding: 4rem 1rem;           /* controls vertical height */
+  padding: 4rem 1rem;
   position: relative;
-  min-height: 350px;            /* ensures header is tall enough to show the image */
+  min-height: 350px;
 }
 
 /* Optional overlay for readability */
@@ -33,15 +33,14 @@ header::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.4);  /* semi-transparent black overlay */
+  background: rgba(0,0,0,0.4);
   z-index: 1;
 }
 
 header h1, header p, nav {
   position: relative;
-  z-index: 2; /* keeps text above overlay */
+  z-index: 2;
 }
-
 
 header h1 {
   font-size: 2.5rem;
@@ -53,7 +52,7 @@ header p {
   opacity: 0.9;
 }
 
-/* Navigation (Horizontal) */
+/* Navigation (Horizontal for desktop) */
 nav {
   margin-top: 1rem;
 }
@@ -65,7 +64,7 @@ nav {
 }
 
 .nav-links li {
-  display: inline-block; /* horizontal layout */
+  display: inline-block;
   margin: 0 0.8rem;
 }
 
@@ -73,15 +72,15 @@ nav {
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: bold;
-  color: #000; /* black text for visibility */
-  background-color: #e6e6e6; /* light gray background */
+  color: #000;
+  background-color: #e6e6e6;
   padding: 0.6rem 1.2rem;
   border-radius: 6px;
   transition: all 0.3s ease;
 }
 
 .nav-links a:hover {
-  background-color: #ffcc00; /* gold hover */
+  background-color: #00ffdd;
   color: #000;
 }
 
@@ -170,3 +169,143 @@ footer a:hover {
 .btn:hover {
   background: #00337a;
 }
+
+/* LinkedIn Badge Card */
+.social-card {
+  text-align: center;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* Social Links (LinkedIn + Instagram) */
+.social-links {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a i {
+  margin-right: 0.5rem;
+}
+
+.social-links a.linkedin {
+  color: #0077b5;
+}
+
+.social-links a.linkedin:hover {
+  color: #004aad;
+}
+
+.social-links a.instagram {
+  color: #e1306c;
+}
+
+.social-links a.instagram:hover {
+  color: #b91d5a;
+}
+
+/* ------------------- Responsive for Mobile ------------------- */
+@media screen and (max-width: 600px) {
+  header {
+    padding: 2rem 1rem;
+    min-height: 250px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  /* Navigation becomes vertical */
+  .nav-links li {
+    display: block;
+    margin: 0.6rem 0;
+  }
+
+  .nav-links a {
+    width: 100%;
+    max-width: 280px;
+    font-size: 1rem;
+    display: inline-block;
+  }
+
+  /* Profile photo scales down */
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* Sections adjust */
+  section {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  section h2 {
+    font-size: 1.4rem;
+  }
+
+  section h3 {
+    font-size: 1.2rem;
+  }
+}
+/* LinkedIn Badge Card */
+.social-card {
+  text-align: center;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  background: #f9f9f9;          /* light background */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  max-width: 400px;             /* keeps it neat */
+}
+
+/* Ensure badge scales properly */
+.badge-base.LI-profile-badge {
+  display: inline-block;
+  width: 100%;
+}
+/* Shared Social Card Style */
+.social-card {
+  text-align: center;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  max-width: 400px;
+}
+
+/* Instagram Badge Styling */
+.instagram-badge a {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #e1306c; /* Instagram pink */
+}
+
+.instagram-badge a i {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.instagram-badge a:hover {
+  color: #b91d5a;
+}
+
